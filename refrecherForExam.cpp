@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <climits>
 using std::string;
 int fib(int n){
     if (n==0){
@@ -24,15 +25,15 @@ class pokeman{
     }
     void upgrade(int gainedexp){
         exp += gainedexp;
-        if (exp>=4000){
-            lvl ++; exp-= 4000;
+        for (int i=0; exp>=4000; lvl++){
+        exp-= 4000;
         }
     }
 };
 
 int main() {
     pokeman fukano(4200, 17);
-    fukano.upgrade(3000);
+    fukano.upgrade(6000);
     std::cout<<"lvl="<<*(fukano.poLvl)<<" exp:"<<*(fukano.poExp)<<std::endl;
     int a(7),b(9);
     string c="fuckTuhh";

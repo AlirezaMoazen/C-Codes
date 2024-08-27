@@ -12,7 +12,28 @@ int fib(int n){
 }
 int sum(int a, int b){
     return a+b;}
+class pokeman{
+    public:
+        int lvl;
+        int exp;
+        int* poLvl = &lvl;
+        int* poExp = &exp;
+    pokeman(int x,int  y){
+        exp = x;
+        lvl = y;
+    }
+    void upgrade(int gainedexp){
+        exp += gainedexp;
+        if (exp>=4000){
+            lvl ++; exp-= 4000;
+        }
+    }
+};
+
 int main() {
+    pokeman fukano(4200, 17);
+    fukano.upgrade(3000);
+    std::cout<<"lvl="<<*(fukano.poLvl)<<" exp:"<<*(fukano.poExp)<<std::endl;
     int a(7),b(9);
     string c="fuckTuhh";
     std::cout<<"tuhh exam"<<std::endl;
